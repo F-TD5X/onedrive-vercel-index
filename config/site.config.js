@@ -41,7 +41,7 @@ module.exports = {
     '',
   // [OPTIONAL] This is where you specify the folders that are password protected. It is an array of paths pointing to all
   // the directories in which you have .password set. Check the documentation for details.
-  protectedRoutes: process.env.PROTECTED_ROUTES || ['/🌞 Private folder/u-need-a-password', '/🥟 Some test files/Protected route'],
+  protectedRoutes: JSON.parse(process.env.PROTECTED_ROUTES); || ['/Data', '/Upload'],
 
   // [OPTIONAL] Use "" here if you want to remove this email address from the nav bar.
   email: process.env.EMAIL || 'mailto:maye@365.maye.moe',
